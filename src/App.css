@@ -1,38 +1,579 @@
-.App {
-  text-align: center;
-}
+@media (min-width: 376px) {
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+  .hide_complited {
+    position: absolute;
+    display: flex;
+    margin-left: 1058px;
+    margin-top: 150px;
+  }
+
+  .hide_checkbox {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin-left: 15px;
+  }
+
+  .app_title {
+    position: absolute;
+    margin-top: 229px;
+    margin-left: 80px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #174348;
+  }
+
+  .input_add {
+    display: flex;
+    position: absolute;
+    margin-top: 256px;
+    margin-left: 80px;
+    width: 1090px;
+    height: 52px;
+
+  }
+
+  .task_input {
+    width: 942px;
+    height: 50px;
+    border: 1px solid #FFCD04;
+    border-radius: 4px;
+    padding-left: 12px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+
+  }
+
+  .task_input_error {
+    width: 942px;
+    height: 50px;
+    border: 1px solid red;
+    border-radius: 4px;
+    padding-left: 12px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+
+  }
+
+  .input_error {
+    width: 954px;
+  }
+
+  ::-webkit-input-placeholder {
+    color: #DFDFDF;
+  }
+
+  .task_input:focus {
+    outline: none;
+    border-color: #FFCD04;
+  }
+
+  .task_input_error:focus {
+    outline: none;
+    border-color: red;
+  }
+
+  .task_add {
+    width: 100px;
+    height: 52px;
+    background: #008594;
+    border: none;
+    border-radius: 4px;
+    margin-left: 24px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    cursor: pointer;
+    color: #FFFFFF;
+
+  }
+
+  .no_tasks {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 631px;
+    height: 90px;
+    margin-top: 484px;
+    margin-left: 389px;
+  }
+
+  .no_task_container1 {
+    display: flex;
+    justify-content: center;
+    width: 480px;
+    height: 36px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.2px;
+    color: #ACACAC;
+  }
+
+  .no_task_container2 {
+    display: flex;
+    justify-content: center;
+    width: 631px;
+    height: 54px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 54px;
+    letter-spacing: 0.002em;
+    color: #666666;
+
+  }
+
+  .tasks {
+    position: absolute;
+    width: 100%;
+    margin-top: 370px;
+  }
+
+  .task {
+    width: 1440px;
+    display: flex;
+    align-items: center;
+    height: 72px;
+  }
+
+  .complite_task {
+
+    width: 1440px;
+    display: flex;
+    align-items: center;
+    height: 72px;
+    background-color: #F6F6F6;
+  }
+
+
+  .checkbox {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin-right: 32px;
+    margin-left: 80px;
+  }
+
+  .task_checkbox {
+    position: absolute;
+    appearance: none;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #008594;
+    border-radius: 2px;
+  }
+
+  .task_checkbox:checked {
+    position: absolute;
+    background: url("../public/img/check.svg") no-repeat;
+    background-size: 16px 16px;
+    border: none;
+    border-radius: 2px;
+    z-index: 2;
+  }
+
+
+  .task_text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: #666666;
+
+  }
+
+  .complite_task_text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: #ACACAC;
+  }
+
+  .task_button {
+    position: absolute;
+    margin-left: 1202px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+  }
+
+  #close_button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .close_icon {
+
+    width: 16px;
+    height: 16px;
+    background: url("../public/img/close.svg") no-repeat;
+    background-size: 16px 16px;
+  }
+
+  .delete_modal {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .modal_text {
+    margin-top: 52px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: #008594;
+
+  }
+
+  .answer_btn1 {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    margin-top: 60px;
+    margin-left: -20px;
+  }
+
+  .answer_btn2 {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+
+  .line {
+    width: 1170px;
+    margin-left: 80px;
+    color: #E5E5E5;
+    background-color: #E5E5E5;
+
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 376px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-  to {
-    transform: rotate(360deg);
+
+  .hide_complited {
+    position: absolute;
+    display: flex;
+
+    margin-left: 183px;
+    margin-top: 92px;
+  }
+
+  .hide_checkbox {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin-left: 15px;
+  }
+
+  .app_title {
+    position: absolute;
+    margin-top: 168px;
+    margin-left: 24px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #174348;
+  }
+
+
+
+  .task_input {
+    width: 327px;
+    height: 42px;
+    border: 1px solid #FFCD04;
+    border-radius: 4px;
+    padding-left: 12px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    margin-top: 195px;
+
+  }
+
+  .task_input_error {
+    width: 327px;
+    height: 42px;
+    border: 1px solid red;
+    border-radius: 4px;
+    padding-left: 12px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+
+    margin-top: 195px;
+  }
+
+  .input_error {
+    margin-left: 24px;
+    width: 327px;
+  }
+
+  ::-webkit-input-placeholder {
+    color: #DFDFDF;
+  }
+
+  .task_input:focus {
+    outline: none;
+    border-color: #FFCD04;
+  }
+
+  .task_input_error:focus {
+    outline: none;
+    border-color: red;
+  }
+
+  .task_add {
+    width: 92px;
+    height: 44px;
+    background: #008594;
+    border: none;
+    border-radius: 4px;
+    margin-top: 24px;
+    margin-left: 259px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    cursor: pointer;
+    color: #FFFFFF;
+
+  }
+
+  .no_tasks {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 316px;
+    height: 48px;
+    margin-top: 120px;
+    margin-left: 29px;
+  }
+
+  .no_task_container1 {
+    display: flex;
+    justify-content: center;
+    width: 286px;
+    height: 21px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 36px;
+    letter-spacing: 0.2px;
+    color: #ACACAC;
+  }
+
+  .no_task_container2 {
+    display: flex;
+    justify-content: center;
+    width: 316px;
+    height: 27px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 54px;
+    letter-spacing: 0.002em;
+    color: #666666;
+
+  }
+
+  .tasks {
+    position: absolute;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .task {
+    width: 375px;
+    display: flex;
+    align-items: center;
+    height: 94px;
+  }
+
+  .complite_task {
+
+    width: 375px;
+    display: flex;
+    align-items: center;
+    height: 94px;
+    background-color: #F6F6F6;
+  }
+
+
+  .checkbox {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin-right: 11px;
+    margin-left: 24px;
+  }
+
+  .task_checkbox {
+    position: absolute;
+    appearance: none;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #008594;
+    border-radius: 2px;
+  }
+
+  .task_checkbox:checked {
+    position: absolute;
+    background: url("../public/img/check.svg") no-repeat;
+    background-size: 16px 16px;
+    border: none;
+    border-radius: 2px;
+    z-index: 2;
+  }
+
+
+  .task_text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #666666;
+
+  }
+
+  .complite_task_text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #ACACAC;
+  }
+
+  .task_button {
+    position: absolute;
+    margin-left: 332px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+  }
+
+  #close_button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .close_icon {
+
+    width: 16px;
+    height: 16px;
+    background: url("../public/img/close.svg") no-repeat;
+    background-size: 16px 16px;
+  }
+
+  .delete_modal {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .modal_text {
+    margin-top: 27px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    color: #008594;
+
+  }
+
+  .answer_btn1 {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: -20px;
+  }
+
+  .answer_btn2 {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+
+  .line {
+    width: 327px;
+    margin-left: 24px;
+    color: #E5E5E5;
+    background-color: #E5E5E5;
+
   }
 }
