@@ -69,6 +69,16 @@
     line-height: 27px;
 
   }
+  .input_button {
+    position: absolute;
+    margin-left: 926px;
+    margin-top: -37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+  }
 
   .input_error {
     width: 954px;
@@ -355,6 +365,16 @@
 
     margin-top: 195px;
   }
+  .input_button {
+    position: absolute;
+    margin-left: 315px;
+    margin-top: -34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+  }
 
   .input_error {
     margin-left: 24px;
@@ -513,6 +533,7 @@
     width: 24px;
     height: 24px;
   }
+
 
   #close_button {
     padding: 0;

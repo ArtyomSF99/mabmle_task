@@ -112,6 +112,16 @@ function App() {
         <div className='input_error'>
           <input onChange={e => textHandler(e)} value={text} name='text' className={inputError === false ? 'task_input' : 'task_input_error'} type={"text"} placeholder='Write here'>
           </input>
+          {text
+          ?<div className='input_button'>
+                  <button id='close_button' onClick={() => {
+                  setText('')
+                  }} >
+                    <div className='close_icon'></div>
+                  </button>
+                </div>
+          :null}
+          
           {(textError) && <div style={{ color: 'red' }}>{textError}</div>}
         </div>
         <button className='task_add' onClick={AddTask}>
